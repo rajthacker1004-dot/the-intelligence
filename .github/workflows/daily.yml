@@ -1,0 +1,35 @@
+name: Daily Digest
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # 9:00 AM IST (UTC+5:30 = UTC 03:30)
+  workflow_dispatch:         # manual trigger from GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate digest
+        run: python fetch.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Intelligence Bot"
+          git config user.email "bot@github.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "digest: $(date -u +'%Y-%m-%d')"
+          git push
