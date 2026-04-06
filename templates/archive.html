@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Intelligence — Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F4F4F5;color:#09090B;-webkit-font-smoothing:antialiased}
+.hdr{background:#09090B;padding:0 24px;border-bottom:1px solid #27272A}
+.hdr-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:16px;height:58px}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:800;color:#FFF;letter-spacing:-.03em}
+.logo span{color:#D946EF}
+.back{font-size:12px;color:#52525B;text-decoration:none;margin-left:auto}
+.back:hover{color:#D946EF}
+.content{max-width:860px;margin:0 auto;padding:32px 24px}
+.pg-title{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.dc{background:#fff;border:1px solid #E4E4E7;border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:all .15s;display:block}
+.dc:hover{border-color:#D946EF;box-shadow:0 2px 12px rgba(0,0,0,.07);transform:translateY(-1px)}
+.dd{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:#09090B;margin-bottom:4px}
+.dm{font-size:11px;color:#71717A}
+.dm span{font-weight:600}
+</style>
+</head>
+<body>
+<div class="hdr"><div class="hdr-in">
+  <div class="logo">The <span>Intelligence</span></div>
+  <a href="../index.html" class="back">← Today's digest</a>
+</div></div>
+<div class="content">
+  <h1 class="pg-title">Archive — {{ digests|length }} digests</h1>
+  <div class="grid">
+    {% for d in digests %}
+    <a href="{{ d.filename }}" class="dc">
+      <div class="dd">{{ d.label }}</div>
+      <div class="dm"><span>{{ d.ai }}</span> AI · <span>{{ d.tourism }}</span> Tourism · <span>{{ d.jobs }}</span> Jobs</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>
