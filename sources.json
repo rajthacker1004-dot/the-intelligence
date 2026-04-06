@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Nick Saraev",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=REPLACE_WITH_CHANNEL_ID",
+    "category": "ai",
+    "type": "youtube",
+    "note": "Find ID: go to youtube.com/@nicksaraev, view page source, search channelId"
+  },
+  {
+    "name": "Julian Goldie",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=REPLACE_WITH_CHANNEL_ID",
+    "category": "ai",
+    "type": "youtube",
+    "note": "Find ID: go to youtube.com/@JulianGoldieSEO, view page source, search channelId"
+  },
+  {
+    "name": "The Decoder",
+    "url": "https://the-decoder.com/feed/",
+    "category": "ai",
+    "type": "newsletter"
+  },
+  {
+    "name": "Import AI",
+    "url": "https://importai.substack.com/feed",
+    "category": "ai",
+    "type": "newsletter"
+  },
+  {
+    "name": "HuggingFace Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "ai",
+    "type": "newsletter"
+  },
+  {
+    "name": "TechCrunch AI",
+    "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "category": "ai",
+    "type": "newsletter"
+  },
+  {
+    "name": "Economic Times Travel",
+    "url": "https://economictimes.indiatimes.com/travel/rssfeeds/2647163.cms",
+    "category": "tourism",
+    "type": "newsletter"
+  },
+  {
+    "name": "Times of India Travel",
+    "url": "https://timesofindia.indiatimes.com/rssfeeds/-2128938712.cms",
+    "category": "tourism",
+    "type": "newsletter"
+  },
+  {
+    "name": "Bayt.com Dubai Jobs",
+    "url": "https://www.bayt.com/en/uae/jobs/rss/?q=AI+risk+finance+data+analyst",
+    "category": "jobs",
+    "type": "jobpost"
+  },
+  {
+    "name": "Gulf News Jobs",
+    "url": "https://jobs.gulfnews.com/rss/jobs.xml",
+    "category": "jobs",
+    "type": "jobpost"
+  }
+]
