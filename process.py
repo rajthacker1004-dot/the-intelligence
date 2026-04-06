@@ -38,7 +38,7 @@ def is_duplicate(url: str, title: str, seen_urls: set, seen_stories: list) -> bo
 def score_job(title: str, summary: str, keywords: list) -> int:
     combined = (title + " " + summary).lower()
     matches = sum(1 for kw in keywords if kw.lower() in combined)
-    return min(100, matches * 20)
+    return min(100, matches * 10)
 
 
 def tag_gujarat(title: str, summary: str, gujarat_cities: list) -> bool:
